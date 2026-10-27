@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隐私政策 | 中小学知识图谱</title>
+  <meta name="description" content="中小学知识图谱（CnMathTaxonomy）隐私政策与用户协议，中英双语，HarmonyOS 应用上架合规页面。">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --bg-soft: #fbfcff;
+      --panel: rgba(255, 255, 255, 0.92);
+      --text: #1b1f2e;
+      --text-soft: #3b4256;
+      --muted: #656d84;
+      --brand: #4f46e5;
+      --brand-deep: #3730a3;
+      --accent: #0f766e;
+      --line: rgba(27, 31, 46, 0.12);
+      --shadow: 0 22px 60px rgba(49, 46, 129, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --content-width: 1120px;
+      font-family: "HarmonyOS Sans SC", "PingFang SC", "Segoe UI Variable Text",
+        "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101320;
+        --bg-soft: #151a29;
+        --panel: rgba(24, 29, 46, 0.92);
+        --text: #e8ebf5;
+        --text-soft: #c3c9dd;
+        --muted: #949cb5;
+        --brand: #8b93f8;
+        --brand-deep: #a5b0ff;
+        --accent: #5eead4;
+        --line: rgba(232, 235, 245, 0.14);
+        --shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.14), transparent 34%),
+        radial-gradient(circle at 90% 8%, rgba(15, 118, 110, 0.12), transparent 28%),
+        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 54%, #eef1f9 100%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(139, 147, 248, 0.16), transparent 34%),
+          radial-gradient(circle at 90% 8%, rgba(94, 234, 212, 0.1), transparent 28%),
+          linear-gradient(180deg, #121624 0%, var(--bg) 54%, #0d101a 100%);
+      }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(27, 31, 46, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27, 31, 46, 0.035) 1px, transparent 1px);
+      background-size: 30px 30px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 86%);
+      -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 86%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body::before {
+        background-image:
+          linear-gradient(rgba(232, 235, 245, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(232, 235, 245, 0.05) 1px, transparent 1px);
+      }
+    }
+
+    a {
+      color: var(--brand-deep);
+    }
+
+    .page {
+      width: min(var(--content-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+      position: relative;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, var(--panel), rgba(238, 240, 253, 0.94)),
+        linear-gradient(180deg, rgba(79, 70, 229, 0.08), transparent);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero {
+        background:
+          linear-gradient(135deg, rgba(26, 31, 50, 0.95), rgba(20, 24, 39, 0.94)),
+          linear-gradient(180deg, rgba(139, 147, 248, 0.12), transparent);
+      }
+    }
+
+    .hero-graph {
+      position: absolute;
+      right: -40px;
+      top: -60px;
+      width: 360px;
+      height: 320px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand-deep);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subtitle {
+      margin: 18px 0 0;
+      max-width: 720px;
+      font-size: 1.03rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .hero-summary {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--brand-deep);
+      font-weight: 600;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero-summary {
+        background: rgba(139, 147, 248, 0.16);
+      }
+    }
+
+    .hero-summary::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.16);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 118, 110, 0.28);
+      background: rgba(15, 118, 110, 0.09);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .badge {
+        border-color: rgba(94, 234, 212, 0.32);
+        background: rgba(94, 234, 212, 0.1);
+      }
+    }
+
+    .meta-stack {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .meta-card {
+      padding: 18px 18px 16px;
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .meta-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-value {
+      display: block;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .meta-secondary {
+      margin: 4px 0 0;
+      font-size: 0.96rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .mono {
+      font-family: "SFMono-Regular", "JetBrains Mono", Consolas, Menlo, monospace;
+      font-size: 0.86rem;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      word-break: break-all;
+      color: var(--brand-deep);
+      font-weight: 600;
+    }
+
+    .contact-link::before {
+      content: "@";
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(79, 70, 229, 0.12);
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      margin: 22px 0;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 36px rgba(49, 46, 129, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .toggle-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .toggle {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease,
+        color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .toggle:hover,
+    .toggle:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+      border-color: rgba(79, 70, 229, 0.42);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.14);
+    }
+
+    .toggle.active {
+      background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 12px 22px rgba(79, 70, 229, 0.24);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .toggle.active {
+        color: #12162a;
+      }
+    }
+
+    .document-shell {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .document {
+      display: none;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .document.is-visible {
+      display: block;
+      animation: fade-up 240ms ease;
+    }
+
+    .document-header {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .document-tag {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--brand-deep);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .document-tag {
+        background: rgba(139, 147, 248, 0.16);
+      }
+    }
+
+    .document-title {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+    }
+
+    .document-meta {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .document-intro {
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .document section + section {
+      margin-top: 24px;
+    }
+
+    .document h3 {
+      margin: 0 0 10px;
+      font-size: 1.14rem;
+      line-height: 1.45;
+    }
+
+    .document p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.9;
+    }
+
+    .document ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: var(--text-soft);
+      line-height: 1.85;
+    }
+
+    .document li + li {
+      margin-top: 4px;
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--accent);
+      background: rgba(15, 118, 110, 0.07);
+      color: var(--text-soft);
+      line-height: 1.8;
+      font-size: 0.97rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .callout {
+        background: rgba(94, 234, 212, 0.08);
+      }
+    }
+
+    .site-footer {
+      margin-top: 26px;
+      padding: 20px 4px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .site-footer a:hover,
+    .site-footer a:focus-visible {
+      text-decoration: underline;
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        top: 10px;
+      }
+
+      .hero-graph {
+        width: 260px;
+        opacity: 0.32;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--content-width), calc(100% - 18px));
+        padding: 18px 0 28px;
+      }
+
+      .hero,
+      .document-shell {
+        padding: 22px;
+      }
+
+      .toolbar {
+        padding: 12px;
+      }
+
+      .toggle {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .toggle-list {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .toggle,
+      .document.is-visible {
+        transition: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <svg class="hero-graph" viewBox="0 0 360 320" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.6">
+          <path d="M120 70 L210 46 M210 46 L300 96 M120 70 L96 160 M120 70 L206 132 M206 132 L300 96 M206 132 L182 226 M96 160 L182 226 M96 160 L52 244 M182 226 L276 264 M182 226 L96 292 M276 264 L300 96"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="210" cy="46" r="9" fill-opacity="0.26"/>
+          <circle cx="300" cy="96" r="12" fill-opacity="0.2"/>
+          <circle cx="120" cy="70" r="15" fill-opacity="0.3"/>
+          <circle cx="206" cy="132" r="11" fill-opacity="0.22"/>
+          <circle cx="96" cy="160" r="13" fill-opacity="0.24"/>
+          <circle cx="182" cy="226" r="16" fill-opacity="0.3"/>
+          <circle cx="276" cy="264" r="10" fill-opacity="0.2"/>
+          <circle cx="52" cy="244" r="9" fill-opacity="0.24"/>
+          <circle cx="96" cy="292" r="11" fill-opacity="0.2"/>
+        </g>
+      </svg>
+
+      <div>
+        <p class="eyebrow" data-i18n="eyebrow">Legal Center</p>
+        <h1 data-i18n="heroTitle">中小学知识图谱协议中心</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          面向 HarmonyOS 上架场景的双语法律页面，集中展示隐私政策与用户协议；本应用完全离线运行，不声明任何系统权限。
+        </p>
+        <div class="hero-summary" id="hero-summary">当前显示：隐私政策</div>
+        <div class="badge-row" id="badge-row">
+          <span class="badge" data-i18n="badgeOffline">完全离线</span>
+          <span class="badge" data-i18n="badgePermission">零权限声明</span>
+          <span class="badge" data-i18n="badgeNoAds">无广告 · 无内购</span>
+          <span class="badge" data-i18n="badgeNoAccount">无需注册</span>
+          <span class="badge" data-i18n="badgeLocalData">本地数据可导出</span>
+        </div>
+      </div>
+
+      <aside class="meta-stack">
+        <section class="meta-card">
+          <span class="meta-label" data-i18n="appLabel">应用</span>
+          <span class="meta-value" data-i18n="appNamePrimary">中小学知识图谱</span>
+          <p class="meta-secondary" data-i18n="appNameSecondary">CnMathTaxonomy</p>
+          <p class="meta-secondary mono">com.xmgod.cnmathtaxonomy</p>
+          <p class="meta-secondary" data-i18n="appVersion">版本 1.0.0 · HarmonyOS</p>
+        </section>
+
+        <section class="meta-card">
+          <span class="meta-label" data-i18n="contactLabel">联系邮箱</span>
+          <a class="contact-link" id="contact-link" href="mailto:tomkuku588@gmail.com">tomkuku588@gmail.com</a>
+          <p class="meta-secondary" data-i18n="contactHint">
+            如联系邮箱或开发者主体信息发生变化，请同步更新页面内容和上架资料。
+          </p>
+        </section>
+      </aside>
+    </header>
+
+    <nav class="toolbar" aria-label="Document controls">
+      <div class="toolbar-group">
+        <span class="toolbar-label" data-i18n="languageLabel">语言</span>
+        <div class="toggle-list">
+          <button class="toggle" type="button" data-lang-switch="zh">中文</button>
+          <button class="toggle" type="button" data-lang-switch="en">English</button>
+        </div>
+      </div>
+
+      <div class="toolbar-group">
+        <span class="toolbar-label" data-i18n="documentLabel">文档</span>
+        <div class="toggle-list">
+          <button class="toggle" type="button" data-doc-switch="privacy">隐私政策</button>
+          <button class="toggle" type="button" data-doc-switch="terms">用户协议</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="document-shell">
+      <article class="document" data-lang="zh" data-doc="privacy">
+        <header class="document-header">
+          <span class="document-tag">隐私政策</span>
+          <h2 class="document-title">中小学知识图谱隐私政策</h2>
+          <div class="document-meta">更新日期：2026-10-27 | 生效日期：2026-10-27</div>
+          <p class="document-intro">
+            欢迎使用中小学知识图谱（CnMathTaxonomy）。本政策适用于中小学知识图谱 HarmonyOS 版本在安装、使用等过程中对信息的处理方式。开发者/运营者为本应用的发布主体，具体以华为应用市场页面公示的实名认证主体为准；联系邮箱为 tomkuku588@gmail.com。本应用是一款完全离线运行的学科知识自查工具，免费、无广告、无需注册。
+          </p>
+        </header>
+
+        <section>
+          <h3>1. 我们处理的信息范围及用途</h3>
+          <p>我们处理的信息仅为你在使用过程中在你设备本地主动创建或自动生成的学习数据，包括：</p>
+          <ul>
+            <li>诊断会话：你选定的知识点范围、学段/年级与题量；</li>
+            <li>逐题作答记录与判分结果；</li>
+            <li>错题记录与知识点收藏；</li>
+            <li>偏好设置：当前学科、深浅色模式、首次启动声明确认状态；</li>
+            <li>你主动导出的 JSON 备份文件，以及为展示报告而生成的本地统计与临时图片缓存。</li>
+          </ul>
+          <p>处理这些信息的目的在于实现知识图谱浏览、学情诊断、诊断报告展示、错题重练、收藏管理与学习进度呈现，以及必要的故障排查。当前版本不提供账号注册或登录，不收集姓名、手机号、电子邮箱、精准位置信息、通讯录、短信、通话记录、相册内容、人脸、指纹、设备标识符等个人信息，也不具备采集上述信息的技术条件。</p>
+        </section>
+
+        <section>
+          <h3>2. 信息存储地点、期限与删除</h3>
+          <p>上述信息默认存储在你的设备本地应用沙箱内的数据库与偏好设置文件中，不会上传至开发者服务器或任何第三方服务，当前版本也不提供云同步。信息保存期限取决于你的使用行为。当你删除单条诊断历史、清空错题本、移除收藏、清空应用数据、卸载应用或重置设备后，相应数据将在可控范围内被删除。若你将应用导出的备份文件另行复制到其他设备、云盘或第三方服务，相关存储行为由你自行决定并负责。</p>
+        </section>
+
+        <section>
+          <h3>3. 权限与系统能力说明</h3>
+          <p>当前版本的核心功能在完全离线的状态下即可运行。应用未声明、未申请任何系统权限，其中包括网络访问权限；因此应用无法主动连接互联网，也不会以通知、定位、相机、麦克风、通讯录、短信等方式获取信息。</p>
+          <p>为实现数据备份与恢复，应用调用 HarmonyOS 提供的系统文件选择与文件保存能力（DocumentViewPicker），仅用于完成你明确发起的导出或导入操作，可读写的具体文件由你在系统选择器中选定，应用不自行扫描或遍历设备文件。为实现诊断报告分享图保存，仅在你点击「保存分享图」时，通过 HarmonyOS 安全控件（SaveButton）触发一次性的相册写入临时授权；你拒绝该授权不影响任何其他功能。除实现前述功能所必需的系统能力外，当前版本不以后台方式读取无关文件，也不采集与学习自查无关的个人信息。若后续版本新增权限或系统能力需求，我们会在相应功能触发前另行说明，并依法取得相应授权。</p>
+        </section>
+
+        <section>
+          <h3>4. 信息共享、转让与公开披露</h3>
+          <p>我们不会将你的个人信息出售、出租、交换或无关共享给第三方，也不会擅自公开披露。仅在以下情形下可能发生信息对外流转：你主动使用导出备份、导入备份、保存分享图等能力；法律法规、监管机关或司法机关要求；或者为保护你、其他用户或公众的人身财产安全所必需。在上述情形下，我们会在法律允许的范围内采取合理保护措施。</p>
+        </section>
+
+        <section>
+          <h3>5. 第三方 SDK、开源数据与对外服务</h3>
+          <p>除 HarmonyOS 系统基础能力外，当前版本不接入广告、商业化统计分析、第三方登录、地图、支付、推送等第三方 SDK，也不向开发者自建服务器或任何外部服务上传你的作答记录、错题、收藏或设置数据。应用内学情诊断的判分、掌握度评估与学习路径建议，均由设备本地的规则与算法引擎计算得出，不调用任何云端 AI 服务，也不上传题目或作答内容。</p>
+          <p>应用内置的知识点、先修关系与题目数据来自开源项目 cn-math-taxonomy，采用 CC BY-NC 4.0（署名-非商业性使用 4.0 国际）许可，已在应用内按许可要求署名。该数据为 AI 生成初稿并经人工整理，未经教师全面审核，可能存在错误、遗漏或过时表述，仅供学习自查参考。若后续版本引入联网能力或其他第三方服务，我们会同步更新本政策，并在必要时通过弹窗、页面提示或系统授权流程取得你的明示同意。</p>
+        </section>
+
+        <section>
+          <h3>6. 信息安全</h3>
+          <p>我们会采取与当前产品形态相适应的合理安全措施，包括完全本地化处理、最小必要原则、仅在你发起操作时访问文件等，以降低信息被未经授权访问、披露、篡改或丢失的风险。请你理解，任何技术措施都无法保证绝对安全。</p>
+          <div class="callout">本地学习数据未做加密存储：若你的设备交由他人使用或丢失，对方可能直接看到应用内的作答记录与诊断报告；本应用不提供设备级锁或独立密码。你仍需妥善保管自己的设备、系统账号以及你自行导出的备份文件。</div>
+        </section>
+
+        <section>
+          <h3>7. 你的权利</h3>
+          <p>你可以在应用内查看、修改、删除诊断历史、错题与收藏，可以在设置中导出全部本地数据为 JSON 备份文件用于自查与迁移，也可以清空应用数据或卸载应用以删除全部信息。由于当前版本不提供在线账号系统，访问、更正、删除、撤回同意等操作可以直接在设备本地完成，无需向我们提出请求；如果你对本政策、数据处理或权限使用有疑问，可以通过本政策载明的联系邮箱与我们联系。</p>
+        </section>
+
+        <section>
+          <h3>8. 未成年人保护</h3>
+          <p>本应用面向中小学生设计，未成年人是主要使用群体。若你是未满 14 周岁的未成年人，应在监护人阅读并同意本政策后使用本应用；若你是未满 8 周岁的儿童，应在监护人陪同与指导下使用。由于应用不联网、不收集、不上传任何个人信息，未成年人使用本应用不会产生个人信息对外流转的风险。我们不会面向未成年人提供定向营销、内购、社交或内容推荐服务，也建议监护人关注孩子的设备使用时长与用眼健康。</p>
+        </section>
+
+        <section>
+          <h3>9. 政策更新与联系我们</h3>
+          <p>当产品功能、处理目的、数据类型、权限使用或适用规则发生实质变化时（例如引入联网能力），我们会更新本政策，并在应用内或本页面显著位置进行提示。本政策的最新版本始终发布于本页面。你可以通过以下方式联系我们：tomkuku588@gmail.com，或访问 GitHub 仓库 https://github.com/tomkuku588-bot/mathtaxonomy。</p>
+        </section>
+      </article>
+
+      <article class="document" data-lang="en" data-doc="privacy">
+        <header class="document-header">
+          <span class="document-tag">Privacy Policy</span>
+          <h2 class="document-title">CnMathTaxonomy Privacy Policy</h2>
+          <div class="document-meta">Updated on 2026-10-27 | Effective on 2026-10-27</div>
+          <p class="document-intro">
+            Welcome to CnMathTaxonomy (K-12 Knowledge Graph). This policy applies to the HarmonyOS version of the app and explains how information is handled when you install and use it. The developer/operator is the entity publishing the app, as displayed on the AppGallery listing under the verified developer identity. The contact email is tomkuku588@gmail.com. The app is a fully offline study self-check tool that is free, ad-free, and requires no registration.
+          </p>
+        </header>
+
+        <section>
+          <h3>1. What Information We Process and Why</h3>
+          <p>We process only the study data that you actively create or that is generated locally on your device while you use the app:</p>
+          <ul>
+            <li>diagnosis sessions: the knowledge points, school stage/grade, and question count you select;</li>
+            <li>per-question answer records and scoring results;</li>
+            <li>mistake records and knowledge-point favorites;</li>
+            <li>preference settings: current subject, light/dark appearance, and the first-launch disclaimer acknowledgement;</li>
+            <li>JSON backup files that you export yourself, plus temporary local statistics and image caches generated to display a report.</li>
+          </ul>
+          <p>These are processed to provide knowledge-graph browsing, learning diagnosis, report display, mistake re-practice, favorites management, progress display, and necessary troubleshooting. The current version does not provide account registration or login. It does not collect your name, phone number, email address, precise location, contacts, SMS, call logs, photo library contents, facial data, fingerprints, device identifiers, or similar personal information, and it has no technical means to do so.</p>
+        </section>
+
+        <section>
+          <h3>2. Storage Location, Retention, and Deletion</h3>
+          <p>The above information is stored by default in a database and preference files inside the app sandbox on your device. It is not uploaded to any developer-operated server or any third-party service, and the current version does not provide cloud sync. Retention depends on your own actions. The relevant data can be removed when you delete a diagnosis history entry, clear the mistake book, remove favorites, clear app data, uninstall the app, or reset the device. If you later copy exported backup files generated by the app to another device, cloud drive, or third-party service, that storage is controlled by you.</p>
+        </section>
+
+        <section>
+          <h3>3. Permissions and System Capabilities</h3>
+          <p>The core features of the current version run fully offline. The app declares and requests no system permissions at all, including network access; it therefore cannot connect to the internet and does not obtain information through notifications, location, camera, microphone, contacts, or SMS.</p>
+          <p>For backup and restore, the app invokes HarmonyOS system file picking and file saving capabilities (DocumentViewPicker) solely to complete the export or import action you initiated; the specific file that is read or written is the one you choose in the system picker, and the app does not scan or traverse your device files on its own. For saving a report share image, a one-time temporary album write authorization is triggered through the HarmonyOS security control (SaveButton) only when you tap "Save share image"; declining it does not affect any other feature. Other than what is necessary for those functions, the current version does not read unrelated files in the background and does not collect personal information unrelated to study self-check. If a future version adds new permissions or system capabilities, we will explain them before the relevant feature is triggered and obtain authorization where required by law.</p>
+        </section>
+
+        <section>
+          <h3>4. Sharing, Transfer, and Public Disclosure</h3>
+          <p>We do not sell, rent, trade, or otherwise share your personal information with unrelated third parties, and we do not publicly disclose it without authorization. External transfer may occur only when you actively use export, import, or save-share-image features; when required by laws, regulators, or courts; or when necessary to protect the personal or property safety of you, other users, or the public. In such cases, we will take reasonable protective measures within the scope permitted by law.</p>
+        </section>
+
+        <section>
+          <h3>5. Third-Party SDKs, Open Source Data, and External Services</h3>
+          <p>Except for HarmonyOS base system capabilities, the current version does not integrate third-party SDKs for advertising, commercial analytics, social login, maps, payment, or push notifications, and it does not upload your answer records, mistakes, favorites, or settings to any developer-operated server or external service. In-app scoring, mastery estimation, and learning-path suggestions are computed by a rule and algorithm engine on your device. The app does not call any cloud AI service and does not upload questions or answers.</p>
+          <p>The built-in knowledge points, prerequisite relations, and questions come from the open-source project cn-math-taxonomy, licensed under CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International), and are attributed in the app as the license requires. That data is an AI-generated draft that has been manually organized but has not been fully reviewed by teachers, and may contain errors, omissions, or outdated wording; it is provided for study self-check reference only. If a future version introduces network capabilities or other third-party services, we will update this policy and, where necessary, obtain your explicit consent through notices, dialogs, or system authorization flows.</p>
+        </section>
+
+        <section>
+          <h3>6. Data Security</h3>
+          <p>We adopt reasonable safeguards appropriate to the current product form, including fully local processing, the minimum-necessary principle, and accessing files only when you initiate an action, in order to reduce the risk of unauthorized access, disclosure, alteration, or loss. Please understand that no technical measure can guarantee absolute security.</p>
+          <div class="callout">Local study data is not stored encrypted: if your device is used by or lost to others, they may directly view your answer records and diagnosis reports in the app. The app does not provide a device lock or a separate passcode. You remain responsible for the security of your device, system accounts, and any backup files you export.</div>
+        </section>
+
+        <section>
+          <h3>7. Your Rights</h3>
+          <p>You can view, edit, or delete diagnosis history, mistakes, and favorites in the app; export all local data as a JSON backup file from the settings page for your own review and migration; or clear app data and uninstall the app to remove all information. Because the current version does not provide an online account system, rights such as access, correction, deletion, and withdrawal of consent can be exercised locally on the device without a request to us. If you have questions about this policy, data handling, or permission use, you may contact us through the email provided above.</p>
+        </section>
+
+        <section>
+          <h3>8. Minors</h3>
+          <p>The app is designed for primary and secondary school students, who are its main user group. If you are under the age of 14, you should use the app only after your parent or legal guardian has read and agreed to this policy. If you are under the age of 8, you should use the app accompanied and guided by a guardian. Because the app does not connect to the network and does not collect or upload any personal information, use by minors creates no risk of personal information leaving the device. We do not provide targeted marketing, in-app purchases, social features, or content recommendation toward minors. We encourage guardians to pay attention to children's screen time and eye health.</p>
+        </section>
+
+        <section>
+          <h3>9. Updates and Contact</h3>
+          <p>If there is a material change to product features, processing purposes, data types, permission use, or applicable rules (for example, introducing network capability), we will update this policy and provide notice in the app and on a prominent position of this page. The latest version of this policy is always published on this page. You may contact us at tomkuku588@gmail.com, or visit the GitHub repository at https://github.com/tomkuku588-bot/mathtaxonomy.</p>
+        </section>
+      </article>
+
+      <article class="document" data-lang="zh" data-doc="terms">
+        <header class="document-header">
+          <span class="document-tag">用户协议</span>
+          <h2 class="document-title">中小学知识图谱用户协议</h2>
+          <div class="document-meta">更新日期：2026-10-27 | 生效日期：2026-10-27</div>
+          <p class="document-intro">
+            欢迎使用中小学知识图谱。本协议适用于中小学知识图谱 HarmonyOS 版本。开发者/运营者为本应用的发布主体，具体以华为应用市场页面公示的实名认证主体为准；联系邮箱为 tomkuku588@gmail.com。你在下载、安装、访问或使用本应用前，应认真阅读本协议及《中小学知识图谱隐私政策》。你安装或使用本应用，即表示你已理解并接受本协议全部内容。
+          </p>
+        </header>
+
+        <section>
+          <h3>1. 协议范围与服务性质</h3>
+          <p>本应用是一款面向中小学生、家长和教师的完全离线学科自查工具，提供知识图谱浏览与检索、按知识点或学段/年级发起的学情诊断、即时判分与解析、掌握度报告与学习路径建议、诊断历史回看、错题本与知识点收藏、本地数据备份与恢复等能力。本应用为免费应用，无广告、无内购、不提供账号注册、登录或社交功能。本应用不提供在线服务，其诊断结论与学习建议不构成教学意见、测评报告或专业教育建议。</p>
+        </section>
+
+        <section>
+          <h3>2. 使用资格与基本规则</h3>
+          <p>你应具备与本协议相适应的民事行为能力；若为未成年人，应由监护人阅读并同意本协议后在监护下使用。你承诺在符合法律法规及应用市场规则的前提下使用本应用，不得利用本应用从事违法违规活动，不得干扰应用正常运行，也不得以逆向工程、破解、篡改、批量抓取、自动化滥用等方式侵害开发者或其他第三方的合法权益。</p>
+        </section>
+
+        <section>
+          <h3>3. 内容准确性与使用责任（重要）</h3>
+          <p>本应用内置的知识点、先修关系与题目数据为 AI 生成初稿并经人工整理，未经教师全面审核，可能存在错误、遗漏、表述不严谨或超出当前课程标准范围的内容。应用生成的掌握度评级、薄弱点定位、诊断报告与学习路径建议基于本地算法对有限样本作答结果作出的推断，仅供学习自查参考，不能替代学校教学、正规测评、教师评估或专业教育意见。你在依据应用内容作出任何学习安排、选题取舍或教学决策前，应向教师或权威教材求证。因使用或无法使用本应用内容而作出的判断及其后果，由你自行承担。</p>
+        </section>
+
+        <section>
+          <h3>4. 开源数据与知识产权</h3>
+          <p>本应用内置的知识点、先修关系与题目数据来自开源项目 cn-math-taxonomy，遵循 CC BY-NC 4.0（署名-非商业性使用 4.0 国际）许可，使用时须遵守该许可的署名要求，且不得将该数据用于商业目的。除你依法享有权利的学习数据外，本应用的软件、界面设计、文案、结构、图形、标识及相关知识产权均归开发者或合法权利人所有。未经事先书面许可，你不得对本应用实施复制、传播、出租、出借、出售、商业性再分发、反向工程、反编译、反汇编、改编或以超出个人学习用途范围的其他使用；法律法规另有明确允许的除外。</p>
+        </section>
+
+        <section>
+          <h3>5. 数据、备份与导入责任</h3>
+          <p>本应用以本地处理为主，不默认提供云同步，也不为你提供任何服务器侧的数据留存或恢复能力。你可以自行决定是否导出备份、保存位置以及是否保留多份副本。因设备损坏、系统重装、恢复出厂设置、误删除、误覆盖、未授权他人使用设备、你自行分享或转存文件等原因导致的数据丢失、泄露或无法恢复风险，需要由你自行承担。</p>
+          <div class="callout">请特别注意：应用的导入恢复功能会以下载的备份文件全量覆盖设备当前的诊断记录、错题与收藏，覆盖后原有数据无法由应用恢复。建议在执行导入前，先导出当前数据作为备份。</div>
+        </section>
+
+        <section>
+          <h3>6. 权限、系统能力与第三方服务</h3>
+          <p>当前版本未声明、未申请任何系统权限，包括网络访问权限，核心功能在完全离线状态下即可运行。应用的备份导出与导入仅通过 HarmonyOS 系统文件选择器完成，可读写的文件范围由你在系统选择器中选定；诊断报告分享图的相册写入仅在你点击「保存分享图」时通过系统安全控件触发一次性临时授权，拒绝该授权不影响其他功能。当前版本不以内置第三方广告、商业化统计分析、第三方登录、地图、支付、推送等服务作为基础运行条件。若后续版本新增相关权限、系统能力或第三方服务，将以实际版本功能、隐私政策及应用内提示为准。</p>
+        </section>
+
+        <section>
+          <h3>7. 服务变更、中断与终止</h3>
+          <p>开发者可以根据产品迭代、系统兼容、运营安排、合规要求或安全需要，对应用功能、界面、支持设备范围、开源数据版本、服务方式和协议文本进行更新、调整、中断或终止。若你违反本协议、相关法律法规、开源许可条款或应用市场规则，开发者有权在合理范围内采取限制功能、暂停服务或停止提供应用等措施。</p>
+        </section>
+
+        <section>
+          <h3>8. 责任限制与免责声明</h3>
+          <p>在法律允许的范围内，本应用按"现状"提供，将尽力提供稳定可用的本地功能，但不保证服务绝对连续、无错误、无中断，也不对知识点与题目数据的准确性、完整性、时效性，以及诊断结论、掌握度评级与学习路径建议的适用性作出明示或默示的保证。对于因系统故障、设备兼容性、不可抗力、监管要求、开源数据本身缺陷或你自身操作不当所导致的使用受限、数据风险或其他损失，开发者将在法律规定范围内承担相应责任。</p>
+        </section>
+
+        <section>
+          <h3>9. 未成年人使用规范</h3>
+          <p>本应用适合 6 岁及以上人群使用。监护人应阅读本协议与隐私政策，引导孩子将本应用作为课后自查与知识梳理的辅助工具，而非替代校内学习与教师辅导；并合理安排使用时长、关注用眼健康。监护人对未成年人的使用行为及由此产生的后果承担相应责任。</p>
+        </section>
+
+        <section>
+          <h3>10. 法律适用与争议解决</h3>
+          <p>本协议的订立、生效、解释、履行及争议解决适用中华人民共和国法律。因本协议或本应用使用引起的争议，双方应优先友好协商解决；协商不成的，任一方有权向有管辖权的人民法院提起诉讼。</p>
+        </section>
+
+        <section>
+          <h3>11. 联系方式</h3>
+          <p>如果你对本协议或本应用的使用规则有疑问、意见或建议，可以通过以下方式联系我们：tomkuku588@gmail.com，或访问 GitHub 仓库 https://github.com/tomkuku588-bot/mathtaxonomy。</p>
+        </section>
+      </article>
+
+      <article class="document" data-lang="en" data-doc="terms">
+        <header class="document-header">
+          <span class="document-tag">Terms of Service</span>
+          <h2 class="document-title">CnMathTaxonomy Terms of Service</h2>
+          <div class="document-meta">Updated on 2026-10-27 | Effective on 2026-10-27</div>
+          <p class="document-intro">
+            Welcome to CnMathTaxonomy. These terms apply to the HarmonyOS version of the app. The developer/operator is the entity publishing the app, as displayed on the AppGallery listing under the verified developer identity. The contact email is tomkuku588@gmail.com. Before downloading, installing, accessing, or using the app, you should read these terms together with the CnMathTaxonomy Privacy Policy. By installing or using the app, you confirm that you understand and accept these terms.
+          </p>
+        </header>
+
+        <section>
+          <h3>1. Scope of the Agreement and Nature of the Service</h3>
+          <p>This app is a fully offline study self-check tool for primary and secondary school students, parents, and teachers. It provides knowledge-graph browsing and search, learning diagnosis initiated by knowledge point or by school stage/grade, instant scoring with explanations, mastery reports and learning-path suggestions, review of diagnosis history, a mistake book and knowledge-point favorites, and local backup and restore. The app is free of charge, contains no advertising, offers no in-app purchases, and provides no account registration, login, or social features. The app provides no online services, and its diagnosis conclusions and study suggestions do not constitute teaching advice, a formal assessment report, or professional educational counsel.</p>
+        </section>
+
+        <section>
+          <h3>2. Eligibility and Basic Rules of Use</h3>
+          <p>You should have the civil capacity required to accept these terms. If you are a minor, your guardian should read and agree to these terms and supervise your use. You must use the app in compliance with applicable laws, regulations, and app store rules. You may not use the app to engage in illegal activities, interfere with its normal operation, or infringe the rights of the developer or any third party through reverse engineering, cracking, tampering, bulk extraction, abusive automation, or similar conduct.</p>
+        </section>
+
+        <section>
+          <h3>3. Content Accuracy and Your Responsibility (Important)</h3>
+          <p>The built-in knowledge points, prerequisite relations, and questions are an AI-generated draft that has been manually organized but has not been fully reviewed by teachers, and may contain errors, omissions, imprecise wording, or content outside the current curriculum standards. The mastery ratings, weak-point localization, diagnosis reports, and learning paths generated by the app are inferences produced by a local algorithm from a limited sample of your answers. They are for study self-check reference only and cannot replace school teaching, formal assessment, teacher evaluation, or professional educational counsel. Before you make any study plan, topic selection, or teaching decision based on the app's content, you should verify it with a teacher or an authoritative textbook. You are responsible for the judgments you make and their consequences from using, or being unable to use, the app's content.</p>
+        </section>
+
+        <section>
+          <h3>4. Open Source Data and Intellectual Property</h3>
+          <p>The built-in knowledge points, prerequisite relations, and questions come from the open-source project cn-math-taxonomy under the CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International) license. When using that data you must comply with its attribution requirements and must not use it for commercial purposes. Except for study data that you own by law, the app's software, interface design, text, structure, graphics, marks, and related intellectual property belong to the developer or the lawful rights holder. Without prior written permission, you may not copy, distribute, rent, lend, sell, commercially redistribute, reverse engineer, decompile, disassemble, adapt, or otherwise use the app beyond personal study purposes, except as expressly permitted by law.</p>
+        </section>
+
+        <section>
+          <h3>5. Data, Backup, and Import Responsibility</h3>
+          <p>The app processes data locally by default, does not provide cloud sync, and does not retain or restore your data on any server. You decide whether to export a backup, where to store it, and whether to keep multiple copies. Risks of data loss, leakage, or unrecoverability caused by device damage, system reinstallation, factory reset, accidental deletion, accidental overwrite, unauthorized use of your device, or files you share or transfer yourself are borne by you.</p>
+          <div class="callout">Please note in particular that the in-app restore function completely overwrites the diagnosis records, mistakes, and favorites currently on your device with the selected backup file, and the overwritten data cannot be recovered by the app. We recommend exporting your current data before performing an import.</div>
+        </section>
+
+        <section>
+          <h3>6. Permissions, System Capabilities, and Third-Party Services</h3>
+          <p>The current version declares and requests no system permissions, including network access, and its core features run fully offline. Backup export and import are performed only through the HarmonyOS system file picker, and the file scope is the one you select in the picker. Album writing for a report share image is triggered only through the HarmonyOS security control as a one-time temporary authorization when you tap "Save share image"; declining it does not affect other features. The current version does not rely on built-in third-party advertising, commercial analytics, social login, maps, payment, or push services as a condition for basic operation. If a future version adds such permissions, system capabilities, or third-party services, the actual features of that version, the Privacy Policy, and the in-app notices will prevail.</p>
+        </section>
+
+        <section>
+          <h3>7. Service Changes, Interruption, and Termination</h3>
+          <p>The developer may update, adjust, interrupt, or terminate the app's features, interface, supported devices, open-source data version, service model, and the agreement texts according to product iteration, system compatibility, operational arrangements, compliance requirements, or security needs. If you violate these terms, applicable laws and regulations, the open-source license terms, or app store rules, the developer may reasonably restrict features, suspend service, or stop providing the app.</p>
+        </section>
+
+        <section>
+          <h3>8. Limitation of Liability and Disclaimers</h3>
+          <p>To the extent permitted by law, the app is provided "as is". The developer will strive to provide stable local functionality but does not guarantee that the service is absolutely continuous, error-free, or uninterrupted, and makes no express or implied warranty regarding the accuracy, completeness, or timeliness of the knowledge point and question data, or the suitability of diagnosis conclusions, mastery ratings, and learning paths. For limitations of use, data risks, or other losses caused by system failure, device compatibility, force majeure, regulatory requirements, defects inherent in the open-source data itself, or your own improper operations, the developer will bear corresponding responsibility within the scope prescribed by law.</p>
+        </section>
+
+        <section>
+          <h3>9. Use by Minors</h3>
+          <p>The app is suitable for users aged 6 and above. Guardians should read these terms and the Privacy Policy, guide children to use the app as an after-class self-check and knowledge-organizing aid rather than a replacement for school learning and teacher guidance, arrange reasonable usage time, and pay attention to eye health. Guardians are responsible for the usage behavior of minors and its consequences.</p>
+        </section>
+
+        <section>
+          <h3>10. Governing Law and Dispute Resolution</h3>
+          <p>The formation, effectiveness, interpretation, performance, and dispute resolution of these terms are governed by the laws of the People's Republic of China. Any dispute arising from these terms or your use of the app should first be resolved through friendly consultation. If consultation fails, either party may bring a claim before a court with jurisdiction.</p>
+        </section>
+
+        <section>
+          <h3>11. Contact</h3>
+          <p>If you have any questions, comments, or suggestions regarding these terms or the rules of using the app, you may contact us at tomkuku588@gmail.com, or visit the GitHub repository at https://github.com/tomkuku588-bot/mathtaxonomy.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footerNote">本页面为协议中心，Markdown 原文与页面内容保持一致。</span>
+      <span>
+        <a href="https://github.com/tomkuku588-bot/mathtaxonomy" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
+        ·
+        <a href="https://github.com/tomkuku588-bot/mathtaxonomy/blob/main/privacy-policy.md" target="_blank" rel="noopener noreferrer" data-i18n="footerPrivacy">隐私政策 Markdown</a>
+        ·
+        <a href="https://github.com/tomkuku588-bot/mathtaxonomy/blob/main/terms-of-service.md" target="_blank" rel="noopener noreferrer" data-i18n="footerTerms">用户协议 Markdown</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    const CONTACT_EMAIL = "tomkuku588@gmail.com";
+
+    const copy = {
+      zh: {
+        eyebrow: "Legal Center",
+        heroTitle: "中小学知识图谱协议中心",
+        heroSubtitle: "面向 HarmonyOS 上架场景的双语法律页面，集中展示隐私政策与用户协议；本应用完全离线运行，不声明任何系统权限。",
+        badgeOffline: "完全离线",
+        badgePermission: "零权限声明",
+        badgeNoAds: "无广告 · 无内购",
+        badgeNoAccount: "无需注册",
+        badgeLocalData: "本地数据可导出",
+        appLabel: "应用",
+        appNamePrimary: "中小学知识图谱",
+        appNameSecondary: "CnMathTaxonomy",
+        appVersion: "版本 1.0.0 · HarmonyOS",
+        contactLabel: "联系邮箱",
+        contactHint: "如联系邮箱或开发者主体信息发生变化，请同步更新页面内容和上架资料。",
+        languageLabel: "语言",
+        documentLabel: "文档",
+        heroSummaryPrivacy: "当前显示：隐私政策",
+        heroSummaryTerms: "当前显示：用户协议",
+        langButtonZh: "中文",
+        langButtonEn: "English",
+        docButtonPrivacy: "隐私政策",
+        docButtonTerms: "用户协议",
+        footerNote: "本页面为协议中心，Markdown 原文与页面内容保持一致。",
+        footerPrivacy: "隐私政策 Markdown",
+        footerTerms: "用户协议 Markdown",
+        pageTitlePrivacy: "隐私政策 | 中小学知识图谱",
+        pageTitleTerms: "用户协议 | 中小学知识图谱"
+      },
+      en: {
+        eyebrow: "Legal Center",
+        heroTitle: "CnMathTaxonomy Legal Center",
+        heroSubtitle: "A bilingual legal page for HarmonyOS listing scenarios, covering the Privacy Policy and Terms of Service. The app runs fully offline and declares no system permissions.",
+        badgeOffline: "Fully offline",
+        badgePermission: "No permissions declared",
+        badgeNoAds: "No ads · No purchases",
+        badgeNoAccount: "No sign-up",
+        badgeLocalData: "Local data export",
+        appLabel: "Application",
+        appNamePrimary: "K-12 Knowledge Graph",
+        appNameSecondary: "CnMathTaxonomy",
+        appVersion: "Version 1.0.0 · HarmonyOS",
+        contactLabel: "Contact Email",
+        contactHint: "If the contact email or developer entity changes, update this page and the store listing together.",
+        languageLabel: "Language",
+        documentLabel: "Document",
+        heroSummaryPrivacy: "Now showing: Privacy Policy",
+        heroSummaryTerms: "Now showing: Terms of Service",
+        langButtonZh: "中文",
+        langButtonEn: "English",
+        docButtonPrivacy: "Privacy Policy",
+        docButtonTerms: "Terms of Service",
+        footerNote: "Markdown sources in the repository stay in sync with this page.",
+        footerPrivacy: "Privacy Policy Markdown",
+        footerTerms: "Terms of Service Markdown",
+        pageTitlePrivacy: "Privacy Policy | CnMathTaxonomy",
+        pageTitleTerms: "Terms of Service | CnMathTaxonomy"
+      }
+    };
+
+    const allowedLangs = new Set(["zh", "en"]);
+    const allowedDocs = new Set(["privacy", "terms"]);
+
+    const params = new URLSearchParams(window.location.search);
+    const savedState = (() => {
+      try {
+        return JSON.parse(window.localStorage.getItem("legal-page-state") || "{}");
+      } catch (error) {
+        return {};
+      }
+    })();
+
+    const detectedLang = navigator.language && navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
+
+    const state = {
+      lang: allowedLangs.has(params.get("lang")) ? params.get("lang") : (allowedLangs.has(savedState.lang) ? savedState.lang : detectedLang),
+      doc: allowedDocs.has(params.get("doc")) ? params.get("doc") : (allowedDocs.has(savedState.doc) ? savedState.doc : "privacy")
+    };
+
+    const i18nNodes = document.querySelectorAll("[data-i18n]");
+    const langButtons = document.querySelectorAll("[data-lang-switch]");
+    const docButtons = document.querySelectorAll("[data-doc-switch]");
+    const documents = document.querySelectorAll(".document");
+    const heroSummary = document.getElementById("hero-summary");
+    const contactLink = document.getElementById("contact-link");
+
+    function updateCopy() {
+      const locale = copy[state.lang];
+
+      i18nNodes.forEach((node) => {
+        const key = node.dataset.i18n;
+        if (locale[key]) {
+          node.textContent = locale[key];
+        }
+      });
+
+      heroSummary.textContent = state.doc === "privacy" ? locale.heroSummaryPrivacy : locale.heroSummaryTerms;
+      document.title = state.doc === "privacy" ? locale.pageTitlePrivacy : locale.pageTitleTerms;
+      document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
+
+      contactLink.href = "mailto:" + CONTACT_EMAIL;
+      contactLink.textContent = CONTACT_EMAIL;
+
+      langButtons.forEach((button) => {
+        const active = button.dataset.langSwitch === state.lang;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.textContent = button.dataset.langSwitch === "zh" ? locale.langButtonZh : locale.langButtonEn;
+      });
+
+      docButtons.forEach((button) => {
+        const active = button.dataset.docSwitch === state.doc;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+        button.textContent = button.dataset.docSwitch === "privacy" ? locale.docButtonPrivacy : locale.docButtonTerms;
+      });
+    }
+
+    function updateDocuments() {
+      documents.forEach((node) => {
+        const visible = node.dataset.lang === state.lang && node.dataset.doc === state.doc;
+        node.classList.toggle("is-visible", visible);
+      });
+    }
+
+    function syncUrlAndStorage() {
+      const next = new URL(window.location.href);
+      next.searchParams.set("lang", state.lang);
+      next.searchParams.set("doc", state.doc);
+      window.history.replaceState({}, "", next);
+      window.localStorage.setItem("legal-page-state", JSON.stringify(state));
+    }
+
+    function render() {
+      updateCopy();
+      updateDocuments();
+      syncUrlAndStorage();
+    }
+
+    langButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextLang = button.dataset.langSwitch;
+        if (!allowedLangs.has(nextLang) || nextLang === state.lang) {
+          return;
+        }
+        state.lang = nextLang;
+        render();
+      });
+    });
+
+    docButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextDoc = button.dataset.docSwitch;
+        if (!allowedDocs.has(nextDoc) || nextDoc === state.doc) {
+          return;
+        }
+        state.doc = nextDoc;
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>
